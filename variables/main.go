@@ -26,4 +26,5 @@ func main() {
 	fmt.Println("Married:", reflect.TypeOf(isMarried))
 
 	fmt.Println("price:", price)
+
 }
