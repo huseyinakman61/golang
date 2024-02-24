@@ -20,6 +20,8 @@ func main() {
 	fmt.Println("Sum 2: ", sum(11, 4, 5))          //multiple values --> return int
 	fmt.Println("Sum 3: ", sum(16, 22, 33, 8))     //multiple values --> return int
 
+	fmt.Println("Multi Values Any Response: ", multiValues(34, "Hüseyin", "Akman", 61)) //multiple type values --> return any
+
 }
 
 // function -> no return
@@ -58,4 +60,12 @@ func sum(num ...int) int {
 		sum += value
 	}
 	return sum
+}
+
+// function multiple values(1,5,8,4,15,n..) --> return int
+func multiValues(num ...any) any {
+	for _, value := range num {
+		fmt.Println("value: ", value)
+	}
+	return "Test"
 }
