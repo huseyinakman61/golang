@@ -14,7 +14,7 @@ func main() {
 	name = "Hüseyin Akman"
 	age = 36
 	isMarried = true
-	price = 1.250
+	price = 1250.25
 
 	fmt.Println("Name:", name)
 	fmt.Printf("%T\n", name)
