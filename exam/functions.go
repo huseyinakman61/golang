@@ -15,6 +15,11 @@ func main() {
 
 	var num = []int{3, 5, 10, 7, 4, 8}
 	fmt.Println("Calc: ", calc(num)) //slices(array) --> return int
+
+	fmt.Println("Sum 1: ", sum(3, 5, 10, 7, 4, 8)) //multiple values --> return int
+	fmt.Println("Sum 2: ", sum(11, 4, 5))          //multiple values --> return int
+	fmt.Println("Sum 3: ", sum(16, 22, 33, 8))     //multiple values --> return int
+
 }
 
 // function -> no return
@@ -37,11 +42,20 @@ func multiResponse(name string, surname string) (string, string) {
 	return strings.ToUpper(name), strings.ToUpper(surname)
 }
 
-// function(slices(array)) -> //return int
+// function(slices(array)) --> return int
 func calc(num []int) int {
 	count := 0
 	for _, value := range num {
 		count += value
 	}
 	return count
+}
+
+// function multiple values(1,5,8,4,15,n..) --> return int
+func sum(num ...int) int {
+	sum := 0
+	for _, value := range num {
+		sum += value
+	}
+	return sum
 }
