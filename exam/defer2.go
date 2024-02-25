@@ -13,5 +13,5 @@ func main() {
 }
 
 func closeDb() {
-	fmt.Println("Databsse Close")
+	fmt.Println("Database Close")
 }
