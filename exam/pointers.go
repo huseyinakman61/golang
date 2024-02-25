@@ -32,9 +32,29 @@ func main() {
 	changePublicVal(&number3)
 	fmt.Println("number3:", number3)
 
+	fmt.Println("-------------------------------")
+	//buradaa pointer yok. test için eklendi
+	//neyseki bu saçma sistem array ve slices değerlerinde yok :)
+	var numbers = []int{12, 415, 51, 3}
+	fmt.Println("numbers:", numbers)
+	changeArr(numbers)               //fakat func içinde array değerini değiştiriiyor
+	fmt.Println("numbers:", numbers) //çıktıda değişken içindeki değerde değişiyors
 }
 
 //bu fonksiyon ile gelen değerin(pointer değeri) global değerini değiştiriyoruz.
 func changePublicVal(i *int) {
 	*i = *i + 10
 }
+
+//pointer kullanmadan array değerleri fonksiyon içinde değişebiliyor.
+func changeArr(i []int) {
+	i[0] = 250
+}
+
+/*
+çok önemli not: Yazılım en önemli yapı taşı olan değişkenler de değer ataması hatalı çalışıyor.
+sonuç: go dilinde hatalı kurgulanan değişken atama özelliği düzeltmek için oluşturulmuş saçma bir yapı => pointers
+
+*eksik dilleri iyileştirmek için geliştirilmiş deniyor, yazılım en önemli ilk öğrenilen konu olan değişken sistemini bozmuşlar :)
+bu dili kullanMAmak için önemli bir neden...
+*/
