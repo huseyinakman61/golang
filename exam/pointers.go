@@ -50,11 +50,3 @@ func changePublicVal(i *int) {
 func changeArr(i []int) {
 	i[0] = 250
 }
-
-/*
-çok önemli not: Yazılım en önemli yapı taşı olan değişkenler de değer ataması hatalı çalışıyor.
-sonuç: go dilinde hatalı kurgulanan değişken atama özelliği düzeltmek için oluşturulmuş saçma bir yapı => pointers
-
-*eksik dilleri iyileştirmek için geliştirilmiş deniyor, yazılım en önemli ilk öğrenilen konu olan değişken sistemini bozmuşlar :)
-bu dili kullanMAmak için önemli bir neden...
-*/
